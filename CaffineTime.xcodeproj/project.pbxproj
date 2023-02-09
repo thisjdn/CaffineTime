@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D702B6DE299452D900151A5C /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D702B6DD299452D900151A5C /* PointOfInterest.swift */; };
+		D702B6E12995550C00151A5C /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D702B6E02995550C00151A5C /* MapViewModel.swift */; };
 		D7D93DF92988BC6F00C6AC08 /* CaffineTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D93DF82988BC6F00C6AC08 /* CaffineTimeApp.swift */; };
-		D7D93DFB2988BC6F00C6AC08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D93DFA2988BC6F00C6AC08 /* ContentView.swift */; };
+		D7D93DFB2988BC6F00C6AC08 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D93DFA2988BC6F00C6AC08 /* MapView.swift */; };
 		D7D93DFD2988BC7200C6AC08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D93DFC2988BC7200C6AC08 /* Assets.xcassets */; };
 		D7D93E002988BC7200C6AC08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D93DFF2988BC7200C6AC08 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D702B6DD299452D900151A5C /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
+		D702B6DF29948A1500151A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D702B6E02995550C00151A5C /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D7D93DF52988BC6F00C6AC08 /* CaffineTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffineTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D93DF82988BC6F00C6AC08 /* CaffineTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffineTimeApp.swift; sourceTree = "<group>"; };
-		D7D93DFA2988BC6F00C6AC08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7D93DFA2988BC6F00C6AC08 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D7D93DFC2988BC7200C6AC08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7D93DFF2988BC7200C6AC08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,8 +56,11 @@
 		D7D93DF72988BC6F00C6AC08 /* CaffineTime */ = {
 			isa = PBXGroup;
 			children = (
+				D702B6DF29948A1500151A5C /* Info.plist */,
 				D7D93DF82988BC6F00C6AC08 /* CaffineTimeApp.swift */,
-				D7D93DFA2988BC6F00C6AC08 /* ContentView.swift */,
+				D7D93DFA2988BC6F00C6AC08 /* MapView.swift */,
+				D702B6E02995550C00151A5C /* MapViewModel.swift */,
+				D702B6DD299452D900151A5C /* PointOfInterest.swift */,
 				D7D93DFC2988BC7200C6AC08 /* Assets.xcassets */,
 				D7D93DFE2988BC7200C6AC08 /* Preview Content */,
 			);
@@ -137,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D93DFB2988BC6F00C6AC08 /* ContentView.swift in Sources */,
+				D7D93DFB2988BC6F00C6AC08 /* MapView.swift in Sources */,
+				D702B6DE299452D900151A5C /* PointOfInterest.swift in Sources */,
 				D7D93DF92988BC6F00C6AC08 /* CaffineTimeApp.swift in Sources */,
+				D702B6E12995550C00151A5C /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +280,8 @@
 				DEVELOPMENT_TEAM = 2NNCB58FYU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaffineTime/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +311,8 @@
 				DEVELOPMENT_TEAM = 2NNCB58FYU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaffineTime/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
