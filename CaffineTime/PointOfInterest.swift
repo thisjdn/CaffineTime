@@ -9,11 +9,10 @@ import MapKit
 
 struct PointOfInterest : Identifiable {
     
-    var id = UUID()
-    var name : String
-    var latitude : Double
-    var longitude : Double
-    
+    let id = UUID()
+    let name : String
+    let latitude : Double
+    let longitude : Double
     
     var coordinates : CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
