@@ -52,11 +52,18 @@ struct MapView: View {
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
-                .searchable(text: $viewModel.searchText, placement: .automatic)
+//                .searchable(text: $viewModel.searchText, placement: .automatic)
                 .tint(Color(.systemBlue))
                 .onAppear {
-                    viewModel.checkIfLocationServicesIsEnabled()
+                    DispatchQueue.main.async {
+                        viewModel.checkIfLocationServicesIsEnabled()
+                    }
                 }
+            }
+            .searchable(text: $viewModel.searchText, placement: .automatic)
+            .onSubmit(of: .search) {
+                self.viewModel.submitCurrentSearchQuery()
+
             }
         }
     }

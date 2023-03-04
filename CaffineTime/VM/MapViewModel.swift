@@ -13,6 +13,8 @@ enum MapDetails {
     static let mapPinCircleFill = "mappin.circle.fill"
     static let arrowTriangleDownFill = "arrowtriangle.down.fill"
     static let testTitle = "Location Name"
+    
+    static let testUrl = "https://api.geoapify.com/v2/places?categories=catering.cafe.coffee&filter=circle:-0.07071648508463113,51.50848194136378,1000&bias=proximity:-0.07071648508463113,51.50848194136378&limit=20&apiKey=330e488f5d1c421697918a9db7281ce0"
 }
  
 
@@ -36,17 +38,19 @@ class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var locationManager : CLLocationManager?
     
-    func checkIfLocationServicesIsEnabled() {
-        DispatchQueue.main.async {
-            if CLLocationManager.locationServicesEnabled() {
-                self.locationManager = CLLocationManager()
-                self.locationManager?.delegate = self
-            } else {
-                print("Location Services must be Enabled. Show an alert indicating so.")
-            }
-        }
-        
+    private var locationOn : Bool {
+            CLLocationManager.locationServicesEnabled()
     }
+    
+    func checkIfLocationServicesIsEnabled() {
+        if self.locationOn {
+            self.locationManager = CLLocationManager()
+            self.locationManager?.delegate = self
+        } else {
+            print("Location Services must be Enabled. Show an alert indicating so.")
+        }
+    }
+    
     private func checkLocationAuthorization() {
         guard let locationManager = locationManager else { return }
         
@@ -71,6 +75,13 @@ class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         checkLocationAuthorization()
+    }
+    
+    func submitCurrentSearchQuery() {
+//        Return key
+        print(searchText)
+        
+        
     }
     
     
