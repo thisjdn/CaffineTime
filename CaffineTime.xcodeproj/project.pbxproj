@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D702B6DE299452D900151A5C /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D702B6DD299452D900151A5C /* PointOfInterest.swift */; };
 		D702B6E12995550C00151A5C /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D702B6E02995550C00151A5C /* MapViewModel.swift */; };
+		D75E108A29AACDB200D59C0E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E108929AACDB200D59C0E /* DataManager.swift */; };
+		D75E108E29AACDEB00D59C0E /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E108D29AACDEB00D59C0E /* MapData.swift */; };
+		D75E109129AACDF900D59C0E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E109029AACDF900D59C0E /* DataModel.swift */; };
 		D7D93DF92988BC6F00C6AC08 /* CaffineTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D93DF82988BC6F00C6AC08 /* CaffineTimeApp.swift */; };
 		D7D93DFB2988BC6F00C6AC08 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D93DFA2988BC6F00C6AC08 /* MapView.swift */; };
 		D7D93DFD2988BC7200C6AC08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D93DFC2988BC7200C6AC08 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 		D702B6DD299452D900151A5C /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
 		D702B6DF29948A1500151A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D702B6E02995550C00151A5C /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D75E108929AACDB200D59C0E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D75E108D29AACDEB00D59C0E /* MapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
+		D75E109029AACDF900D59C0E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D7D93DF52988BC6F00C6AC08 /* CaffineTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffineTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D93DF82988BC6F00C6AC08 /* CaffineTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffineTimeApp.swift; sourceTree = "<group>"; };
 		D7D93DFA2988BC6F00C6AC08 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -37,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D75E108629A2E90500D59C0E /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D7D93DFA2988BC6F00C6AC08 /* MapView.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		D75E108729A2E91500D59C0E /* M */ = {
+			isa = PBXGroup;
+			children = (
+				D702B6DD299452D900151A5C /* PointOfInterest.swift */,
+				D75E108929AACDB200D59C0E /* DataManager.swift */,
+				D75E108D29AACDEB00D59C0E /* MapData.swift */,
+				D75E109029AACDF900D59C0E /* DataModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		D75E108829A2E91B00D59C0E /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				D702B6E02995550C00151A5C /* MapViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		D7D93DEC2988BC6F00C6AC08 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +91,9 @@
 			children = (
 				D702B6DF29948A1500151A5C /* Info.plist */,
 				D7D93DF82988BC6F00C6AC08 /* CaffineTimeApp.swift */,
-				D7D93DFA2988BC6F00C6AC08 /* MapView.swift */,
-				D702B6E02995550C00151A5C /* MapViewModel.swift */,
-				D702B6DD299452D900151A5C /* PointOfInterest.swift */,
+				D75E108729A2E91500D59C0E /* M */,
+				D75E108629A2E90500D59C0E /* V */,
+				D75E108829A2E91B00D59C0E /* VM */,
 				D7D93DFC2988BC7200C6AC08 /* Assets.xcassets */,
 				D7D93DFE2988BC7200C6AC08 /* Preview Content */,
 			);
@@ -145,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75E109129AACDF900D59C0E /* DataModel.swift in Sources */,
 				D7D93DFB2988BC6F00C6AC08 /* MapView.swift in Sources */,
+				D75E108A29AACDB200D59C0E /* DataManager.swift in Sources */,
 				D702B6DE299452D900151A5C /* PointOfInterest.swift in Sources */,
 				D7D93DF92988BC6F00C6AC08 /* CaffineTimeApp.swift in Sources */,
+				D75E108E29AACDEB00D59C0E /* MapData.swift in Sources */,
 				D702B6E12995550C00151A5C /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

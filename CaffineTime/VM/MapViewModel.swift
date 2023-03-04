@@ -8,8 +8,8 @@
 import MapKit
 
 enum MapDetails {
-    static let startingLocation = CLLocationCoordinate2D(latitude: 37.3346, longitude: -122.0090)
-    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+    static let startingLocation = CLLocationCoordinate2D(latitude: 43.6426, longitude: -79.3871)
+    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
     static let mapPinCircleFill = "mappin.circle.fill"
     static let arrowTriangleDownFill = "arrowtriangle.down.fill"
     static let testTitle = "Location Name"
@@ -35,11 +35,10 @@ class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
         PointOfInterest(name: "Testing", latitude: 37.3346, longitude: -121.9594)
     ]
     
-    
     var locationManager : CLLocationManager?
     
     private var locationOn : Bool {
-            CLLocationManager.locationServicesEnabled()
+        CLLocationManager.locationServicesEnabled()
     }
     
     func checkIfLocationServicesIsEnabled() {
@@ -65,6 +64,10 @@ class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
         case .authorizedAlways, .authorizedWhenInUse:
             if let safeLocation = locationManager.location {
                 region = MKCoordinateRegion(center: safeLocation.coordinate, span: MapDetails.defaultSpan)
+                let lon = safeLocation.coordinate.longitude
+                let lat = safeLocation.coordinate.latitude
+                print("lon: \(lon), lat: \(lat)")
+                print("updated current location")
             } else {
                 print("Unexpectedly found nil while unwrapping locationManager.location")
             }
@@ -78,8 +81,9 @@ class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func submitCurrentSearchQuery() {
-//        Return key
-        print(searchText)
+//        Return key -> searchBar
+        print(searchText.lowercased())
+        
         
         
     }
@@ -87,3 +91,4 @@ class MapViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     
 }
+
